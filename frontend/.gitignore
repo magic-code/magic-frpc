@@ -1,0 +1,12 @@
+# 前端 .gitignore
+
+node_modules/
+dist/
+.svelte-kit/
+*.local
+
+# Vite
+.vite/
+
+# TypeScript
+*.tsbuildinfo
