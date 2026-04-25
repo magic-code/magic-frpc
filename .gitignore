@@ -17,11 +17,16 @@ vendor/
 # Go workspace file
 go.work
 
-# Build output
+# Build output directories (binaries and generated files)
 build/bin/
-build/windows/
-build/darwin/
-build/linux/
+build/windows/appicon.icon/
+build/darwin/icons.icns
+build/darwin/Assets.car
+build/linux/appimage/
+build/linux/nfpm/
+build/android/app/
+build/android/gradle/
+build/android/scripts/
 
 # Frontend
 frontend/node_modules/
@@ -43,15 +48,16 @@ Thumbs.db
 .env
 *.local
 
-# Wails
-wails.json
-
 # Database
 *.db
 *.sqlite
-#.omc
-build
-.task
-.omc
-.claude
-bin
+
+# Task cache
+.task/
+
+# AI assistant state
+.omc/
+.claude/
+
+# Binary output
+bin/

@@ -1,6 +1,7 @@
 # Magic FRPc
 
-[![Release](https://github.com/magic-frpc/gui/actions/workflows/release.yml/badge.svg)](https://github.com/magic-frpc/gui/releases)
+[![Latest Release](https://img.shields.io/github/v/release/magic-frpc/gui?label=release&sort=semver)](https://github.com/magic-frpc/gui/releases)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/magic-frpc/gui/release.yml)](https://github.com/magic-frpc/gui/actions/workflows/release.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/magic-frpc/gui)](https://goreportcard.com/report/github.com/magic-frpc/gui)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
