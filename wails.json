@@ -1,0 +1,25 @@
+{
+  "name": "magic-frpc",
+  "title": "Magic FRPc",
+  "description": "跨平台 frpc GUI 管理客户端",
+  "version": "0.1.0",
+  "author": {
+    "name": "Magic FRPc Team",
+    "email": "magic-frpc@example.com"
+  },
+  "frontend": {
+    "dir": "frontend",
+    "build": {
+      "dir": "dist",
+      "cmd": "npm run build"
+    },
+    "dev": {
+      "cmd": "npm run dev",
+      "port": 9245
+    }
+  },
+  "build": {
+    "dir": "build",
+    "output": "bin"
+  }
+}
