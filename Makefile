@@ -29,7 +29,7 @@ build-linux:
 
 # 清理构建产物
 clean:
-	rm -rf build/bin
+	rm -rf bin
 	rm -rf frontend/dist
 	rm -rf frontend/.svelte-kit
 	rm -rf frontend/node_modules
