@@ -43,15 +43,15 @@ jobs:
       - name: Install Frontend Dependencies
         run: |
           cd frontend
-          npm ci
+          npm install --include=optional
 
       - name: Build Windows
-        run: wails3 build -platform windows/amd64 -ldflags "-H windowsgui"
+        run: wails3 task windows:build ARCH=amd64
 
       - name: Package Windows
         run: |
-          cd build\bin
-          7z a ..\..\magic-frpc-windows-amd64.zip magic-frpc.exe
+          cd bin
+          7z a ..\magic-frpc-windows-amd64.zip magic-frpc.exe
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
@@ -86,13 +86,13 @@ jobs:
       - name: Install Frontend Dependencies
         run: |
           cd frontend
-          npm ci
+          npm install --include=optional
 
       - name: Build macOS (Intel)
-        run: wails3 build -platform darwin/amd64
+        run: wails3 task darwin:package ARCH=amd64
 
       - name: Package macOS
-        run: tar -czf magic-frpc-darwin-amd64.tar.gz -C build/bin magic-frpc.app
+        run: tar -czf magic-frpc-darwin-amd64.tar.gz -C bin magic-frpc.app
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
@@ -127,13 +127,13 @@ jobs:
       - name: Install Frontend Dependencies
         run: |
           cd frontend
-          npm ci
+          npm install --include=optional
 
       - name: Build macOS (Apple Silicon)
-        run: wails3 build -platform darwin/arm64
+        run: wails3 task darwin:package ARCH=arm64
 
       - name: Package macOS
-        run: tar -czf magic-frpc-darwin-arm64.tar.gz -C build/bin magic-frpc.app
+        run: tar -czf magic-frpc-darwin-arm64.tar.gz -C bin magic-frpc.app
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
@@ -173,13 +173,13 @@ jobs:
       - name: Install Frontend Dependencies
         run: |
           cd frontend
-          npm ci
+          npm install --include=optional
 
       - name: Build Linux
-        run: wails3 build -platform linux/amd64
+        run: wails3 task linux:build ARCH=amd64
 
       - name: Package Linux
-        run: tar -czf magic-frpc-linux-amd64.tar.gz -C build/bin magic-frpc
+        run: tar -czf magic-frpc-linux-amd64.tar.gz -C bin magic-frpc
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4

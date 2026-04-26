@@ -22,6 +22,21 @@ jobs:
         with:
           go-version: ${{ env.GO_VERSION }}
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Frontend Dependencies
+        run: |
+          cd frontend
+          npm install --include=optional
+
+      - name: Build Frontend Assets
+        run: |
+          cd frontend
+          npm run build
+
       - name: Go Mod Download
         run: go mod download
 
@@ -45,7 +60,7 @@ jobs:
       - name: Install Dependencies
         run: |
           cd frontend
-          npm ci
+          npm install --include=optional
 
       - name: Build Frontend
         run: |

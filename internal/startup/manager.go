@@ -1,3 +1,5 @@
+//go:build windows
+
 // Package startup 提供开机启动功能
 package startup
 
