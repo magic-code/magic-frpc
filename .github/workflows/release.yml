@@ -43,7 +43,7 @@ jobs:
       - name: Install Frontend Dependencies
         run: |
           cd frontend
-          npm install --include=optional
+          npm ci
 
       - name: Build Windows
         run: wails3 task windows:build ARCH=amd64
@@ -86,7 +86,7 @@ jobs:
       - name: Install Frontend Dependencies
         run: |
           cd frontend
-          npm install --include=optional
+          npm ci
 
       - name: Build macOS (Intel)
         run: wails3 task darwin:package ARCH=amd64
@@ -127,7 +127,7 @@ jobs:
       - name: Install Frontend Dependencies
         run: |
           cd frontend
-          npm install --include=optional
+          npm ci
 
       - name: Build macOS (Apple Silicon)
         run: wails3 task darwin:package ARCH=arm64
@@ -173,7 +173,7 @@ jobs:
       - name: Install Frontend Dependencies
         run: |
           cd frontend
-          npm install --include=optional
+          npm ci
 
       - name: Build Linux
         run: wails3 task linux:build ARCH=amd64
